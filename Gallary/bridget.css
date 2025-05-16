@@ -8,7 +8,7 @@
   width: 100%;
   height: auto;
   padding: 1rem;
-  background-color: #fcf5e5;
+  /* background-color: #fcf5e5; */
 }
 .gallery_grid {
   display: grid;
@@ -56,7 +56,11 @@
 .gallery_1 .content i:hover {
   color: #000;
 }
-
+/* .thin-line {
+  border: 1.5px solid rgba(33, 33, 33, 0.3);
+  width: 100%;
+  margin: 0.8rem 0;
+} */
 /* MEDIA QUARIES */
 
 @media (max-width: 900px) {
