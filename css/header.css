@@ -1,7 +1,12 @@
-header img {
+header {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
   width: 100%;
+}
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
