@@ -5,7 +5,9 @@
 }
 
 .gallery_container {
-  width: 100%;
+  /* width: 100%; */
+  width: 92%;
+  margin: 0 auto;
   height: auto;
   padding: 1rem;
   background-color: #fcf5e5;
