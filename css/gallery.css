@@ -9,7 +9,7 @@
   width: 92%;
   margin: 0 auto;
   height: auto;
-  padding: 1rem;
+  padding: 0.5rem;
   /* background-color: #fcf5e5; */
 }
 .gallery_grid {
@@ -50,8 +50,8 @@
 }
 
 .gallery_1 .content i {
-  color: #999797;
-  font-size: 1.1rem;
+  color: rgb(129, 127, 127);
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
 }
