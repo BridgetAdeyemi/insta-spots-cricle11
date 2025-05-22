@@ -64,10 +64,30 @@
         />
         New Post
       </button>
+
+      <!-- ============== WRITE YOUR MODAL CODE HERE ================== -->
+      <dialog id="newPostDialog">
+        <button type="button" class="closeDialog" style="float: right">
+          ❌
+        </button>
+        <div class="wrapperrr">
+          <h2>New Post</h2>
+          <span style="font-size: 1rem">Upload Image or Paste URL</span>
+          <form class="formm" id="newPostForm">
+            <input type="text" name="text" placeholder="Enter name" required />
+            <input
+              type="file"
+              name="imageFile"
+              accept="image/*"
+              placeholder="https://example.com/image.jpg"
+            />
+            <input type="url" name="imageUrl" placeholder="Image URL" />
+            <button class="submitBtn" type="submit">Add Card</button>
+          </form>
+        </div>
+      </dialog>
     </section>
     <div class="thin-line"></div>
-
-    <!-- ============== WRITE YOUR MODAL CODE HERE ================== -->
 
     <!--card gallery -->
     <section class="gallery_container">
