@@ -1,0 +1,25 @@
+dialog {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    height: fit-content;
+    opacity: 0.9;
+    margin:0 2.8rem;
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  dialog button {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    margin: 0 8rem;
+  }
