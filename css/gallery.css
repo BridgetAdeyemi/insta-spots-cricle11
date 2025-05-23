@@ -54,6 +54,7 @@
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .gallery_1 .content i:hover {
   color: #000;
