@@ -33,7 +33,6 @@
     </header>
 
     <!-- profile -->
-
     <section class="profile">
       <img
         class="profileImage"
@@ -67,146 +66,212 @@
     </section>
     <div class="thin-line"></div>
 
-    <!-- card gallery -->
+    
     <section class="gallery_container">
       <div class="gallery_grid">
-        <!--first image-->
-        <!-- onclick attribute to open modal -->
-        <div class="gallery_1">
+        <div class="gallery_image">
           <img
             src="../Assets/images/Vals-Thorens.png"
             alt="Val Thorens"
             class="img1"
-            onclick="document.getElementById('valThorens').show()"
+            onclick="document.getElementById('valThorens').showModal()"
           />
           <div class="content">
             <p id="text1">Val Thorens</p>
-
             <i class="fa-regular fa-heart"></i>
           </div>
 
-          <!-- modal with id valThorens for first image -->
-          <dialog id="valThorens">
-            <p>A ski town in the French Alps, known for its stunning slopes and vibrant après-ski scene.</p>
-            <button onclick="document.getElementById('valThorens').close()">Close</button>
+          <!-- modal with id valThorens -->
+          <dialog id="valThorens" class="preview-dialog">
+            <img
+              src="../Assets/images/Vals-Thorens.png"
+              alt="Val Thorens"
+              class="modal-img"
+            />
+            <p class="modal-title">Val Thorens</p>
+            <p class="modal-description">
+              A ski town in the French Alps, known for its stunning slopes and
+              vibrant après-ski scene.
+            </p>
+            <button onclick="document.getElementById('valThorens').close()">
+              Close
+            </button>
           </dialog>
         </div>
 
         <!--second image-->
-        <!-- onclick attribute to open modal -->
-        <div class="gallery_1">
+        <div class="gallery_image">
           <img
             src="../Assets/images/Restaurant-Terrace.png"
             alt="Restaurant terrace"
             class="img1"
-            onclick="document.getElementById('restaurantTerrace').show()"
+            onclick="document.getElementById('restaurantTerrace').showModal()"
           />
           <div class="content">
             <p id="text2">Restaurant terrace</p>
             <i class="fa-regular fa-heart"></i>
           </div>
 
-          <!-- modal with id restaurantTerrace for second image -->
-          <dialog id="restaurantTerrace">
-            <p>A restaurant terrace dressed in green and yellow - an ambience of grandeur and elegance. A promise of fine dining and a good time.</p>
-            <button onclick="document.getElementById('restaurantTerrace').close()">Close</button>
+          <!-- modal with id restaurantTerrace -->
+          <dialog id="restaurantTerrace" class="preview-dialog">
+            <img
+              src="../Assets/images/Restaurant-Terrace.png"
+              alt="Restaurant terrace"
+              class="modal-img"
+            />
+            <p class="modal-title">Restaurant terrace</p>
+            <p class="modal-description">
+              A restaurant terrace dressed in green and yellow - an ambience of
+              grandeur and elegance. A promise of fine dining and a good time.
+            </p>
+            <button
+              onclick="document.getElementById('restaurantTerrace').close()"
+            >
+              Close
+            </button>
           </dialog>
         </div>
 
         <!--third image-->
-        <!-- onclick attribute to open modal -->
-        <div class="gallery_1">
+        <div class="gallery_image">
           <img
             src="../Assets/images/An-outdoor-cafe.png"
             alt="An outdoor cafe"
             class="img1"
-            onclick="document.getElementById('outdoorCafe').show()"
+            onclick="document.getElementById('outdoorCafe').showModal()"
           />
           <div class="content">
-            <p id="text3">An outdoor cafe </p>
+            <p id="text3">An outdoor cafe</p>
             <i class="fa-regular fa-heart"></i>
           </div>
 
-          <!-- modal with id outdoorCafe for third image -->
-          <dialog id="outdoorCafe">
-            <p>An outdoor cafe buzzing softly with laughter and conversation. The perfect spot to unwind and savour the moment.</p>
-            <button onclick="document.getElementById('outdoorCafe').close()">Close</button>
+          <!-- modal with id outdoorCafe -->
+          <dialog id="outdoorCafe" class="preview-dialog">
+            <img
+              src="../Assets/images/An-outdoor-cafe.png"
+              alt="An outdoor cafe"
+              class="modal-img"
+            />
+            <p class="modal-title">An outdoor cafe</p>
+            <p class="modal-description">
+              An outdoor cafe buzzing softly with laughter and conversation. The
+              perfect spot to unwind and savour the moment.
+            </p>
+            <button onclick="document.getElementById('outdoorCafe').close()">
+              Close
+            </button>
           </dialog>
         </div>
 
         <!--fourth image-->
-        <!-- onclick attribute to open modal -->
-        <div class="gallery_1">
+        <div class="gallery_image">
           <img
             src="../Assets/images/A-very-long-bridge-over-the-forest.png"
             alt="A very long bridge, over the forest..."
             class="img1"
-            onclick="document.getElementById('longBridge').show()"
+            onclick="document.getElementById('longBridge').showModal()"
           />
           <div class="content">
             <p id="text4">A very long bridge, over the forest...</p>
             <i class="fa-regular fa-heart"></i>
           </div>
 
-          <dialog id="longBridge">
-            <p>A very long bridge, suspended over the forest. Can you dare to cross it?</p>
-            <button onclick="document.getElementById('longBridge').close()">Close</button>
+          <dialog id="longBridge" class="preview-dialog">
+            <img
+              src="../Assets/images/A-very-long-bridge-over-the-forest.png"
+              alt="A very long bridge, over the forest..."
+              class="modal-img"
+            />
+            <p class="modal-title">A very long bridge, over the forest...</p>
+            <p class="modal-description">
+              A very long bridge, suspended over the forest. Can you dare to
+              cross it?
+            </p>
+            <button onclick="document.getElementById('longBridge').close()">
+              Close
+            </button>
           </dialog>
-
         </div>
 
         <!--fifth image-->
-        <!-- onclick attribute to open modal -->
-        <div class="gallery_1">
+        <div class="gallery_image">
           <img
             src="../Assets/images/Tunnel-with-the-morning-light.png"
             alt="Tunnel with morning light"
             class="img1"
-            onclick="document.getElementById('tunnelMorningLight').show()"
+            onclick="document.getElementById('tunnelMorningLight').showModal()"
           />
           <div class="content">
             <p id="text5">Tunnel with morning light</p>
             <i class="fa-regular fa-heart"></i>
           </div>
 
-          <dialog id="tunnelMorningLight">
-            <p>Iron-framed glass walls, morning light spilling from their sides - glinting, scattering. A breathtaking sight.</p>
-            <button onclick="document.getElementById('tunnelMorningLight').close()">Close</button>
+          <dialog id="tunnelMorningLight" class="preview-dialog">
+            <img
+              src="../Assets/images/Tunnel-with-the-morning-light.png"
+              alt="Tunnel with morning light"
+              class="modal-img"
+            />
+            <p class="modal-title">Tunnel with morning light</p>
+            <p class="modal-description">
+              Iron-framed glass walls, morning light spilling from their sides -
+              glinting, scattering. A breathtaking sight.
+            </p>
+            <button
+              onclick="document.getElementById('tunnelMorningLight').close()"
+            >
+              Close
+            </button>
           </dialog>
         </div>
 
         <!--sixth image-->
-        <!-- onclick attribute to open modal -->
-        <div class="gallery_1">
+        <div class="gallery_image">
           <img
             src="../Assets/images/Mountain-house.png"
             alt="Mountain house"
             class="img1"
-            onclick="document.getElementById('mountainHouse').show()"
+            onclick="document.getElementById('mountainHouse').showModal()"
           />
           <div class="content">
             <p id="text6">Mountain house</p>
             <i class="fa-regular fa-heart"></i>
           </div>
 
-          <!-- modal with id mountainHouse for sixth image -->
-          <dialog id="mountainHouse">
-            <p>A mountain house shrouded in fog, surrounded by trees and of course mountains. Depending on your vibe, it could be mean solitude.
-              A cabin perfect for a getaway.
+          <dialog id="mountainHouse" class="preview-dialog">
+            <img
+              src="../Assets/images/Mountain-house.png"
+              alt="Mountain house"
+              class="modal-img"
+            />
+            <p class="modal-title">Mountain house</p>
+            <p class="modal-description">
+              A mountain house shrouded in fog, surrounded by trees and of
+              course mountains. Depending on your vibe, it could be mean
+              solitude. A cabin perfect for a getaway.
             </p>
-            <button onclick="document.getElementById('mountainHouse').close()">Close</button>
+            <button onclick="document.getElementById('mountainHouse').close()">
+              Close
+            </button>
           </dialog>
         </div>
       </div>
     </section>
     <div class="thin-line"></div>
 
-    <!-- ============== WRITE YOUR MODAL CODE HERE ================== -->
-
-    <!-- footer  -->
+    <!-- footer -->
     <footer>
       <div>2024 &copy; Spots</div>
     </footer>
     <script src="./preview-card.js"></script>
+    <script>
+      document.querySelectorAll("dialog.preview-dialog").forEach((dialog) => {
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) {
+            dialog.close();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
