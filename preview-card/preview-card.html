@@ -66,7 +66,6 @@
     </section>
     <div class="thin-line"></div>
 
-    
     <section class="gallery_container">
       <div class="gallery_grid">
         <div class="gallery_image">
@@ -74,7 +73,7 @@
             src="../Assets/images/Vals-Thorens.png"
             alt="Val Thorens"
             class="img1"
-            onclick="document.getElementById('valThorens').showModal()"
+            onclick="showPreview('valThorens')"
           />
           <div class="content">
             <p id="text1">Val Thorens</p>
@@ -93,9 +92,7 @@
               A ski town in the French Alps, known for its stunning slopes and
               vibrant après-ski scene.
             </p>
-            <button onclick="document.getElementById('valThorens').close()">
-              Close
-            </button>
+            <button onclick="closePreview('valThorens')">Close</button>
           </dialog>
         </div>
 
@@ -105,7 +102,7 @@
             src="../Assets/images/Restaurant-Terrace.png"
             alt="Restaurant terrace"
             class="img1"
-            onclick="document.getElementById('restaurantTerrace').showModal()"
+            onclick="showPreview('restaurantTerrace')"
           />
           <div class="content">
             <p id="text2">Restaurant terrace</p>
@@ -124,11 +121,7 @@
               A restaurant terrace dressed in green and yellow - an ambience of
               grandeur and elegance. A promise of fine dining and a good time.
             </p>
-            <button
-              onclick="document.getElementById('restaurantTerrace').close()"
-            >
-              Close
-            </button>
+            <button onclick="closePreview('restaurantTerrace')">Close</button>
           </dialog>
         </div>
 
@@ -138,7 +131,7 @@
             src="../Assets/images/An-outdoor-cafe.png"
             alt="An outdoor cafe"
             class="img1"
-            onclick="document.getElementById('outdoorCafe').showModal()"
+            onclick="showPreview('outdoorCafe')"
           />
           <div class="content">
             <p id="text3">An outdoor cafe</p>
@@ -157,7 +150,7 @@
               An outdoor cafe buzzing softly with laughter and conversation. The
               perfect spot to unwind and savour the moment.
             </p>
-            <button onclick="document.getElementById('outdoorCafe').close()">
+            <button onclick="closePreview('outdoorCafe')">
               Close
             </button>
           </dialog>
@@ -169,7 +162,7 @@
             src="../Assets/images/A-very-long-bridge-over-the-forest.png"
             alt="A very long bridge, over the forest..."
             class="img1"
-            onclick="document.getElementById('longBridge').showModal()"
+            onclick="showPreview('longBridge')"
           />
           <div class="content">
             <p id="text4">A very long bridge, over the forest...</p>
@@ -187,7 +180,7 @@
               A very long bridge, suspended over the forest. Can you dare to
               cross it?
             </p>
-            <button onclick="document.getElementById('longBridge').close()">
+            <button onclick="closePreview('longBridge')">
               Close
             </button>
           </dialog>
@@ -199,7 +192,7 @@
             src="../Assets/images/Tunnel-with-the-morning-light.png"
             alt="Tunnel with morning light"
             class="img1"
-            onclick="document.getElementById('tunnelMorningLight').showModal()"
+            onclick="showPreview('tunnelMorningLight')"
           />
           <div class="content">
             <p id="text5">Tunnel with morning light</p>
@@ -218,7 +211,7 @@
               glinting, scattering. A breathtaking sight.
             </p>
             <button
-              onclick="document.getElementById('tunnelMorningLight').close()"
+              onclick="closePreview('tunnelMorningLight')"
             >
               Close
             </button>
@@ -231,7 +224,7 @@
             src="../Assets/images/Mountain-house.png"
             alt="Mountain house"
             class="img1"
-            onclick="document.getElementById('mountainHouse').showModal()"
+            onclick="showPreview('mountainHouse')"
           />
           <div class="content">
             <p id="text6">Mountain house</p>
@@ -250,7 +243,7 @@
               course mountains. Depending on your vibe, it could be mean
               solitude. A cabin perfect for a getaway.
             </p>
-            <button onclick="document.getElementById('mountainHouse').close()">
+            <button onclick="closePreview('mountainHouse')">
               Close
             </button>
           </dialog>
@@ -264,14 +257,5 @@
       <div>2024 &copy; Spots</div>
     </footer>
     <script src="./preview-card.js"></script>
-    <script>
-      document.querySelectorAll("dialog.preview-dialog").forEach((dialog) => {
-        dialog.addEventListener("click", (event) => {
-          if (event.target === dialog) {
-            dialog.close();
-          }
-        });
-      });
-    </script>
   </body>
 </html>
