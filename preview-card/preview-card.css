@@ -1,12 +1,11 @@
-
 .preview-dialog {
-  padding: 1rem;
+  padding: 2rem;
   border: none;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   background: #fff;
   width: 90%;
-  max-width: 400px;
+  max-width: 700px;
   height: auto;
   margin: auto;
   text-align: center;
@@ -15,6 +14,7 @@
 
 .gallery_image img {
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .preview-dialog::backdrop {
@@ -22,11 +22,12 @@
 }
 
 .modal-img {
-  width: 100%;
-  height: auto;
+  width: 400px;
+  /* height: auto; */
   border-radius: 10px;
-  object-fit: cover;
+  /* object-fit: cover; */
   margin-bottom: 0.75rem;
+  margin: 0 auto;
 }
 
 .modal-title {
@@ -54,5 +55,4 @@
 
 .preview-dialog button:hover {
   background: #ddd;
-  
 }

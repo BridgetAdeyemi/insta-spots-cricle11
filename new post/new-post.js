@@ -1,35 +1,38 @@
+// localStorage.removeItem("cards");
 document.addEventListener("DOMContentLoaded", () => {
-  const dialog = document.getElementById('newPostDialog');
-  const postBtn = document.querySelector('.profileBtn');
-  const form = document.getElementById('newPostForm');
-  const cardContainer = document.querySelector('.gallery_grid');
-  const divWrapper = document.querySelector('.wrapperrr');
+  const dialog = document.getElementById("newPostDialog");
+  const postBtn = document.querySelector(".profileBtn");
+  const form = document.getElementById("newPostForm");
+  const cardContainer = document.querySelector(".gallery_grid");
+  const divWrapper = document.querySelector(".wrapperrr");
 
   // Show Dialog when profile Btn is clicked
-  postBtn.addEventListener('click', () => {
+  postBtn.addEventListener("click", () => {
     dialog.showModal();
   });
 
   // Close Dialog with Escape key
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       dialog.close();
     }
   });
 
   // Close Dialog when clicking outside of it
-  dialog.addEventListener('click', (e) => {
+  dialog.addEventListener("click", (e) => {
     if (!divWrapper.contains(e.target)) {
       dialog.close();
     }
   });
 
   // Load saved cards on page load
-  const savedCards = JSON.parse(localStorage.getItem('cards')) || [];
-  savedCards.forEach(cardData => createCard(cardData.imageUrl, cardData.text));
+  const savedCards = JSON.parse(localStorage.getItem("cards")) || [];
+  savedCards.forEach((cardData) =>
+    createCard(cardData.imageUrl, cardData.text)
+  );
 
   // Form submit
-  form.addEventListener('submit', function (e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const text = form.text.value;
@@ -58,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function createCard(imageUrl, text) {
-    const card = document.createElement('div');
-    card.classList.add('card');
+    const card = document.createElement("div");
+    card.classList.add("card");
 
     card.innerHTML = `
       <img src="${imageUrl}" alt="Card Image" />
@@ -73,8 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function saveCardToStorage(imageUrl, text) {
-    const savedCards = JSON.parse(localStorage.getItem('cards')) || [];
+    const savedCards = JSON.parse(localStorage.getItem("cards")) || [];
     savedCards.push({ imageUrl, text });
-    localStorage.setItem('cards', JSON.stringify(savedCards));
+    localStorage.setItem("cards", JSON.stringify(savedCards));
   }
 });

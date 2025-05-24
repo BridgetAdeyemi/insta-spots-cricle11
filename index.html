@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/profile.css" />
     <link rel="stylesheet" href="./css/gallery.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./preview-card/preview-card.css" />
     <!-- ICON LINK -->
     <link
       rel="stylesheet"
@@ -66,11 +67,230 @@
     </section>
     <div class="thin-line"></div>
 
-    <!-- gallery -->
+    <!-- ============PROFILE EDIT MODAL================= -->
+    <dialog class="modal" id="editModal">
+      <div class="flex">
+        <div class="modal-content">
+          <p class="closeBtn">❌</p>
+          <h2>Edit Profile</h2>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Name" id="editName" required />
+            <label for="job">Job Title</label>
+            <input type="text" placeholder="Job Title" id="editJob" required />
+
+            <input
+              type="file"
+              name="imageFile"
+              id="editImage"
+              accept="image/*"
+            />
+
+            <button id="saveProfile">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- NEW GALLERY HTML CODE -->
     <section class="gallery_container">
       <div class="gallery_grid">
-        <!--first image-->
-        <div class="gallery_1">
+        <div class="gallery_image">
+          <img
+            src="../Assets/images/Vals-Thorens.png"
+            alt="Val Thorens"
+            class="img1"
+            onclick="document.getElementById('valThorens').showModal()"
+          />
+          <div class="content">
+            <p id="text1">Val Thorens</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <!-- modal with id valThorens -->
+          <dialog id="valThorens" class="preview-dialog">
+            <img
+              src="../Assets/images/Vals-Thorens.png"
+              alt="Val Thorens"
+              class="modal-img"
+            />
+            <p class="modal-title">Val Thorens</p>
+            <p class="modal-description">
+              A ski town in the French Alps, known for its stunning slopes and
+              vibrant après-ski scene.
+            </p>
+            <button onclick="document.getElementById('valThorens').close()">
+              Close
+            </button>
+          </dialog>
+        </div>
+
+        <!--second image-->
+        <div class="gallery_image">
+          <img
+            src="../Assets/images/Restaurant-Terrace.png"
+            alt="Restaurant terrace"
+            class="img1"
+            onclick="document.getElementById('restaurantTerrace').showModal()"
+          />
+          <div class="content">
+            <p id="text2">Restaurant terrace</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <!-- modal with id restaurantTerrace -->
+          <dialog id="restaurantTerrace" class="preview-dialog">
+            <img
+              src="../Assets/images/Restaurant-Terrace.png"
+              alt="Restaurant terrace"
+              class="modal-img"
+            />
+            <p class="modal-title">Restaurant terrace</p>
+            <p class="modal-description">
+              A restaurant terrace dressed in green and yellow - an ambience of
+              grandeur and elegance. A promise of fine dining and a good time.
+            </p>
+            <button
+              onclick="document.getElementById('restaurantTerrace').close()"
+            >
+              Close
+            </button>
+          </dialog>
+        </div>
+
+        <!--third image-->
+        <div class="gallery_image">
+          <img
+            src="../Assets/images/An-outdoor-cafe.png"
+            alt="An outdoor cafe"
+            class="img1"
+            onclick="document.getElementById('outdoorCafe').showModal()"
+          />
+          <div class="content">
+            <p id="text3">An outdoor cafe</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <!-- modal with id outdoorCafe -->
+          <dialog id="outdoorCafe" class="preview-dialog">
+            <img
+              src="../Assets/images/An-outdoor-cafe.png"
+              alt="An outdoor cafe"
+              class="modal-img"
+            />
+            <p class="modal-title">An outdoor cafe</p>
+            <p class="modal-description">
+              An outdoor cafe buzzing softly with laughter and conversation. The
+              perfect spot to unwind and savour the moment.
+            </p>
+            <button onclick="document.getElementById('outdoorCafe').close()">
+              Close
+            </button>
+          </dialog>
+        </div>
+
+        <!--fourth image-->
+        <div class="gallery_image">
+          <img
+            src="../Assets/images/A-very-long-bridge-over-the-forest.png"
+            alt="A very long bridge, over the forest..."
+            class="img1"
+            onclick="document.getElementById('longBridge').showModal()"
+          />
+          <div class="content">
+            <p id="text4">A very long bridge, over the forest...</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <dialog id="longBridge" class="preview-dialog">
+            <img
+              src="../Assets/images/A-very-long-bridge-over-the-forest.png"
+              alt="A very long bridge, over the forest..."
+              class="modal-img"
+            />
+            <p class="modal-title">A very long bridge, over the forest...</p>
+            <p class="modal-description">
+              A very long bridge, suspended over the forest. Can you dare to
+              cross it?
+            </p>
+            <button onclick="document.getElementById('longBridge').close()">
+              Close
+            </button>
+          </dialog>
+        </div>
+
+        <!--fifth image-->
+        <div class="gallery_image">
+          <img
+            src="../Assets/images/Tunnel-with-the-morning-light.png"
+            alt="Tunnel with morning light"
+            class="img1"
+            onclick="document.getElementById('tunnelMorningLight').showModal()"
+          />
+          <div class="content">
+            <p id="text5">Tunnel with morning light</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <dialog id="tunnelMorningLight" class="preview-dialog">
+            <img
+              src="../Assets/images/Tunnel-with-the-morning-light.png"
+              alt="Tunnel with morning light"
+              class="modal-img"
+            />
+            <p class="modal-title">Tunnel with morning light</p>
+            <p class="modal-description">
+              Iron-framed glass walls, morning light spilling from their sides -
+              glinting, scattering. A breathtaking sight.
+            </p>
+            <button
+              onclick="document.getElementById('tunnelMorningLight').close()"
+            >
+              Close
+            </button>
+          </dialog>
+        </div>
+
+        <!--sixth image-->
+        <div class="gallery_image">
+          <img
+            src="../Assets/images/Mountain-house.png"
+            alt="Mountain house"
+            class="img1"
+            onclick="document.getElementById('mountainHouse').showModal()"
+          />
+          <div class="content">
+            <p id="text6">Mountain house</p>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+
+          <dialog id="mountainHouse" class="preview-dialog">
+            <img
+              src="../Assets/images/Mountain-house.png"
+              alt="Mountain house"
+              class="modal-img"
+            />
+            <p class="modal-title">Mountain house</p>
+            <p class="modal-description">
+              A mountain house shrouded in fog, surrounded by trees and of
+              course mountains. Depending on your vibe, it could be mean
+              solitude. A cabin perfect for a getaway.
+            </p>
+            <button onclick="document.getElementById('mountainHouse').close()">
+              Close
+            </button>
+          </dialog>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW GALLERY HTML CODE END -->
+
+    <!-- OLD GALLERY HTML CODE -->
+    <!-- <section class="gallery_container">
+      <div class="gallery_grid"> -->
+    <!--first image-->
+    <!-- <div class="gallery_1">
           <img
             src="./Assets/images/Vals-Thorens.png"
             alt="Val Thorens"
@@ -81,89 +301,92 @@
 
             <i class="fa-regular fa-heart"></i>
           </div>
-        </div>
+        </div> -->
 
-        <!--second image-->
-        <div class="gallery_1">
+    <!--second image-->
+    <!-- <div class="gallery_1">
           <img
             src="./Assets/images/Restaurant-Terrace.png"
             alt="Restaurant terrace"
             class="img1"
           />
           <div class="content">
-            <p id="text2">Restaurant terrace</p>
-            <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart2" /> -->
-            <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
-            <i class="fa-regular fa-heart"></i>
+            <p id="text2">Restaurant terrace</p> -->
+    <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart2" /> -->
+    <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
+    <!-- <i class="fa-regular fa-heart"></i>
           </div>
-        </div>
+        </div> -->
 
-        <!--third image-->
-        <div class="gallery_1">
+    <!--third image-->
+    <!-- <div class="gallery_1">
           <img
             src="./Assets/images/An-outdoor-cafe.png"
             alt="An outdoor cafe"
             class="img1"
           />
           <div class="content">
-            <p id="text3">An outdoor cafe</p>
-            <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart3" /> -->
-            <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
-            <i class="fa-regular fa-heart"></i>
+            <p id="text3">An outdoor cafe</p> -->
+    <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart3" /> -->
+    <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
+    <!-- <i class="fa-regular fa-heart"></i>
           </div>
-        </div>
+        </div> -->
 
-        <!--fourth image-->
-        <div class="gallery_1">
+    <!--fourth image-->
+    <!-- <div class="gallery_1">
           <img
             src="./Assets/images/A-very-long-bridge-over-the-forest.png"
             alt="A very long bridge, over the forest..."
             class="img1"
           />
           <div class="content">
-            <p id="text4">A very long bridge, over the forest...</p>
-            <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart4" /> -->
-            <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
-            <i class="fa-regular fa-heart"></i>
+            <p id="text4">A very long bridge, over the forest...</p> -->
+    <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart4" /> -->
+    <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
+    <!-- <i class="fa-regular fa-heart"></i>
           </div>
-        </div>
+        </div> -->
 
-        <!--fifth image-->
-        <div class="gallery_1">
+    <!--fifth image-->
+    <!-- <div class="gallery_1">
           <img
             src="./Assets/images/Tunnel-with-the-morning-light.png"
             alt="Tunnel with morning light"
             class="img1"
           />
           <div class="content">
-            <p id="text5">Tunnel with morning light</p>
-            <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart5" /> -->
-            <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
-            <i class="fa-regular fa-heart"></i>
+            <p id="text5">Tunnel with morning light</p> -->
+    <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart5" /> -->
+    <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
+    <!-- <i class="fa-regular fa-heart"></i>
           </div>
-        </div>
+        </div> -->
 
-        <!--sixth image-->
-        <div class="gallery_1">
+    <!--sixth image-->
+    <!-- <div class="gallery_1">
           <img
             src="./Assets/images/Mountain-house.png"
             alt="Mountain house"
             class="img1"
           />
           <div class="content">
-            <p id="text6">Mountain house</p>
-            <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart6" /> -->
-            <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
-            <i class="fa-regular fa-heart"></i>
+            <p id="text6">Mountain house</p> -->
+    <!-- <img src="../assets/icons/Like-Icon-Light.svg" alt="heart6" /> -->
+    <!-- <img src="./Assets/icons/Like-Icon-Light.svg" alt="like-icon" /> -->
+    <!-- <i class="fa-regular fa-heart"></i>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <div class="thin-line"></div>
 
     <!-- footer  -->
     <footer>
       <div>2024 &copy; Spots</div>
     </footer>
+
+    <script src="./profile-edit/profile.js"></script>
+    <script src="./liked-button/liked-btn.js"></script>
   </body>
 </html>
